@@ -1,0 +1,187 @@
+<style>
+.w-embed:has(> .cnl){width:100%}
+.cnl{--n:#0B1F2E;--s:#2F4859;--r:#B23F25;--t:#7FC8BA;--c:#F4EFE6;--c2:#EFE7D8;width:100%;max-width:1152px;margin:0 auto;box-sizing:border-box;text-align:left;color:var(--n);font-family:'Inter Tight',Inter,system-ui,sans-serif}
+.cnl *{box-sizing:border-box}
+.cnl-k{font:500 12px/1 'IBM Plex Mono',ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--r);margin:0 0 12px}
+.cnl-h{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:clamp(28px,3.6vw,40px);line-height:1.1;margin:0 0 10px}
+.cnl-sub{font-size:16px;line-height:1.55;color:var(--s);margin:0 0 28px;max-width:62ch}
+.cnl-spot{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:28px;align-items:center;background:var(--n);color:var(--c);border-radius:18px;padding:28px;margin:0 0 32px}
+.cnl-spot .cnl-k{color:var(--t)}
+.cnl-spot h3{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:clamp(26px,3vw,34px);line-height:1.1;margin:0 0 10px;color:var(--c)}
+.cnl-spot p{margin:0;font-size:15.5px;line-height:1.6;color:#B9C6CF}
+.cnl-spark{width:100%;height:auto;display:block}
+.cnl-spark-cap{display:flex;justify-content:space-between;font:500 11px/1 'IBM Plex Mono',ui-monospace,monospace;letter-spacing:.06em;color:#B9C6CF;margin-top:8px}
+.cnl-big{display:flex;align-items:baseline;gap:10px;margin:14px 0 0;flex-wrap:wrap}
+.cnl-big b{font-family:Fraunces,Georgia,serif;font-size:30px;font-weight:600;color:var(--c)}
+.cnl-big span{font:500 12px/1.3 'IBM Plex Mono',ui-monospace,monospace;letter-spacing:.06em;color:var(--t);text-transform:uppercase}
+.cnl-bar{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;justify-content:space-between;margin:0 0 18px}
+.cnl-tabs,.cnl-chips{display:flex;flex-wrap:wrap;gap:8px}
+.cnl button{font:inherit;cursor:pointer}
+.cnl-tab{border:0;background:transparent;padding:8px 2px;margin-right:14px;font:600 16px/1.2 'Inter Tight',Inter,system-ui,sans-serif;color:var(--s);border-bottom:2px solid transparent}
+.cnl-tab[aria-selected="true"]{color:var(--n);border-color:var(--r)}
+.cnl-tab span{font:500 12px/1 'IBM Plex Mono',monospace;opacity:.6;margin-left:4px}
+.cnl-chip{border:1px solid rgba(11,31,46,.2);background:transparent;color:var(--s);font:500 11px/1 'IBM Plex Mono',ui-monospace,monospace!important;letter-spacing:.08em;text-transform:uppercase;padding:9px 13px;border-radius:999px}
+.cnl-chip[aria-pressed="true"]{background:var(--n);border-color:var(--n);color:var(--c)}
+.cnl-tab:focus-visible,.cnl-chip:focus-visible,.cnl-more:focus-visible{outline:2px solid var(--r);outline-offset:2px}
+.cnl-head,.cnl-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:20px;align-items:center}
+.cnl-head{font:500 11px/1 'IBM Plex Mono',ui-monospace,monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--s);opacity:.8;padding:0 18px 10px}
+.cnl-list{display:flex;flex-direction:column;gap:8px}
+.cnl-row{background:#fff;border:1px solid rgba(11,31,46,.08);border-radius:12px;padding:14px 18px}
+.cnl-row[hidden]{display:none}
+.cnl-name{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:19px;line-height:1.2;margin:0}
+.cnl-meta{display:flex;flex-wrap:wrap;gap:4px 10px;margin-top:5px;font-size:13px;color:var(--s)}
+.cnl-flag{display:inline-flex;align-items:center;gap:4px;font:500 10.5px/1 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--n);background:var(--c2);border-radius:999px;padding:4px 8px}
+.cnl-flag::before{content:"\2605";color:var(--r);font-size:11px}
+.cnl-g{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 12px;align-items:center}
+.cnl-nums{font-size:14px;color:var(--s);white-space:nowrap}
+.cnl-nums b{color:var(--n);font-weight:600}
+.cnl-x{grid-row:span 2;font-family:Fraunces,Georgia,serif;font-weight:600;font-size:22px;color:var(--r);min-width:62px;text-align:right}
+.cnl-track{height:8px;border-radius:99px;background:var(--c2);overflow:hidden}
+.cnl-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--t),var(--n))}
+.cnl-more{display:block;margin:14px auto 0;border:1px solid rgba(11,31,46,.25);background:transparent;color:var(--n);font:500 12px/1 'IBM Plex Mono',monospace!important;letter-spacing:.08em;text-transform:uppercase;padding:12px 18px;border-radius:999px}
+.cnl-more[hidden]{display:none}
+.cnl-note{margin:26px 0 0;font-size:13.5px;line-height:1.6;color:var(--s);max-width:80ch}
+.cnl-note b{color:var(--n)}
+@media (max-width:720px){.cnl-spot{grid-template-columns:1fr;padding:22px}.cnl-head{display:none}.cnl-row{grid-template-columns:1fr;gap:10px}.cnl-nums{white-space:normal}}
+</style>
+<div class="cnl" id="cn-log">
+  <p class="cnl-k">Highlights from the log</p>
+  <h2 class="cnl-h">How early I was, and how far they've climbed</h2>
+  <p class="cnl-sub">Spotify monthly listeners on the day I first saved each artist, compared with today. Acts marked with a star were already in my library before 2023.</p>
+
+  <div class="cnl-spot">
+    <div>
+      <p class="cnl-k">Spotlight &middot; Listening since Feb 2021</p>
+      <h3>Vincent Lima</h3>
+      <p>A New Jersey songwriter I saved in early 2021 and have kept coming back to: 10 songs in my library. His debut album, <i>To Love A Thing That Fades</i>, came out in 2025, and his listeners have more than doubled since January. Fall 2026 dates include the Showbox in Seattle, First Avenue and the 9:30 Club.</p>
+      <div class="cnl-big"><b>377K &rarr; 982K</b><span>monthly listeners &middot; Oct 2023 to now &middot; 2.6&times;</span></div>
+    </div>
+    <div>
+      <svg class="cnl-spark" viewBox="0 0 360 140" role="img" aria-label="Vincent Lima monthly Spotify listeners, October 2023 to October 2026, rising from 377 thousand to 982 thousand"></svg>
+      <div class="cnl-spark-cap"><span>Oct 2023</span><span>Oct 2024</span><span>Oct 2025</span><span>Now</span></div>
+    </div>
+  </div>
+
+  <div class="cnl-bar">
+    <div class="cnl-tabs" role="tablist" aria-label="Choose a list">
+      <button type="button" class="cnl-tab" role="tab" data-t="took" aria-selected="true">Took off<span></span></button>
+      <button type="button" class="cnl-tab" role="tab" data-t="rising" aria-selected="false">On my radar now<span></span></button>
+    </div>
+    <div class="cnl-chips" role="group" aria-label="Filter by genre">
+      <button type="button" class="cnl-chip" data-g="all" aria-pressed="true">All</button>
+      <button type="button" class="cnl-chip" data-g="c" aria-pressed="false">Country &amp; roots</button>
+      <button type="button" class="cnl-chip" data-g="p" aria-pressed="false">Pop, folk &amp; indie</button>
+    </div>
+  </div>
+  <div class="cnl-head" aria-hidden="true"><span>Artist</span><span>Monthly listeners: when I saved them &rarr; now</span></div>
+  <div class="cnl-list" role="tabpanel"></div>
+  <button type="button" class="cnl-more"></button>
+  <p class="cnl-note"><b>Where these numbers come from:</b> the save dates come from my Spotify library. Listener counts are Spotify monthly listeners from Chartmetric, and Chartmetric's history only goes back three years (to October 2023). For artists marked with a star, I was listening before that window opens, so their starting number is from October 2023 and the real climb since I found them is bigger than shown. "Biggest room" comes from press coverage like Pollstar, Rolling Stone and Music Week, and capacities are approximate.</p>
+</div>
+<script>
+(function(){
+  // name, list, genre (c|p), first saved (YYYY-MM), listeners at save (thousands), now (thousands), pre-2023 flag, biggest room
+  var D=[
+    ['Sabrina Carpenter','took','p','2015-04',25532,53270,1,'BST Hyde Park, London (~65,000)'],
+    ['ROLE MODEL','took','p','2019-08',1935,10783,1,'OVO Arena Wembley (~12,500)'],
+    ['Gracie Abrams','took','p','2019-10',8320,38807,1,'Arena tour, 2026–27 (~15,000)'],
+    ['Olivia Dean','took','p','2020-11',3247,52548,1,'The O2, London, six nights (~20,000)'],
+    ['Noah Kahan','took','p','2018-12',19248,35453,1,'Stadium tour (~40,000)'],
+    ['Teddy Swims','took','p','2020-08',8657,42962,1,'North American arena tour (~15,000)'],
+    ['Sam Fender','took','p','2019-09',3542,19654,1,'UK stadium tour, 2027 (~50,000)'],
+    ['Tate McRae','took','p','2020-01',45081,47543,1,'Little Caesars Arena, two nights (~20,000)'],
+    ['Vincent Lima','took','p','2021-02',377,982,1,''],
+    ['Sienna Spiro','took','p','2024-11',619,35815,0,'Eventim Apollo, London, two nights (~5,000)'],
+    ['Forrest Frank','took','p','2024-02',3371,6936,0,'Bridgestone Arena, Nashville (~15,000)'],
+    ['Malcolm Todd','took','p','2025-03',6290,39600,0,'The Greek Theatre, three nights (~8,300)'],
+    ['Alex Warren','took','p','2024-03',6652,45011,0,'North American arena tour (~15,000)'],
+    ['sombr','took','p','2024-05',1406,54553,0,'TD Garden, Boston (~19,500)'],
+    ['Zach Top','took','c','2024-04',877,6659,0,'Select arenas, 2026 (~10,000)'],
+    ['Jesse Welles','took','c','2024-11',237,568,0,'Pier 17, New York (~3,500)'],
+    ['Buffalo Traffic Jam','took','c','2025-11',1299,5632,0,'Ryman Auditorium, 2027 (~2,360)'],
+    ['Cameron Whitcomb','took','c','2024-02',494,10839,0,''],
+    ['Vincent Mason','took','c','2024-07',1234,8194,0,''],
+    ['John Michael Howell','took','c','2023-12',1081,6063,0,''],
+    ['Noah Rinker','took','c','2024-08',293,4304,0,''],
+    ['Carter Faith','took','c','2025-07',821,2983,0,''],
+    ['Redferrin','took','c','2023-12',612,2569,0,''],
+    ['Kaitlin Butts','took','c','2023-12',385,2091,0,''],
+    ['Gannon Fremin & CCREV','took','c','2025-08',402,2018,0,''],
+    ['Hayden Blount','took','c','2025-05',288,1585,0,''],
+    ['Graham Barham','took','c','2023-11',443,1612,0,''],
+    ['Joe Jordan','took','c','2024-10',298,1248,0,''],
+    ['Sons of Habit','took','c','2024-08',9,760,0,''],
+    ['Zach John King','took','c','2025-02',643,1611,0,''],
+    ['Blake Whiten','took','c','2025-03',492,4721,0,''],
+    ['Lola Young','took','p','2024-02',956,23959,0,''],
+    ['Dexter and The Moonrocks','took','c','2024-07',374,10143,0,''],
+    ['Jade LeMac','took','p','2023-12',675,9024,0,''],
+    ['almost monday','took','p','2024-04',882,3582,0,''],
+    ['Florence Road','took','p','2025-10',441,3336,0,''],
+    ['Susannah Joffe','took','p','2024-04',152,2158,0,''],
+    ['Amble','took','p','2024-09',253,1915,0,''],
+    ['Haute & Freddy','took','p','2026-01',208,1877,0,''],
+    ['Winyah','took','p','2025-05',101,855,0,''],
+    ['Bo Staloch','took','p','2024-02',71,684,0,''],
+    ['Jonny Stanback','took','p','2023-12',24,614,0,''],
+    ['80 ACRES','rising','c','2026-04',29,445,0,''],
+    ['Abbie Callahan','rising','c','2025-07',35,352,0,''],
+    ['Clayton Nile Young','rising','c','2024-02',42,452,0,''],
+    ['Colin Lynch','rising','c','2026-04',11,269,0,''],
+    ['KG And The Bad Habits','rising','c','2026-04',13,105,0,''],
+    ['Evan Bartels','rising','c','2024-09',20,108,0,''],
+    ['Noah James','rising','c','2026-02',298,1139,0,''],
+    ['Hunter Flynn','rising','c','2026-05',42,155,0,''],
+    ['Luke Rob','rising','c','2025-10',198,726,0,''],
+    ['Cole Goodwin','rising','c','2025-02',58,206,0,''],
+    ['John Morgan','rising','c','2025-03',532,1503,0,''],
+    ['Nicholas Jamerson','rising','c','2026-04',172,394,0,''],
+    ['Elliot Greer','rising','c','2025-08',178,413,0,''],
+    ['Liam St. John','rising','c','2025-02',291,617,0,''],
+    ['Tyce Delk','rising','c','2026-06',814,949,0,'']
+  ];
+  var VL=[377,374,388,338,372,424,414,441,450,427,460,553,553,497,469,470,504,545,532,521,655,579,623,692,665,565,470,412,424,436,425,609,474,593,917,876,933,982];
+  var root=document.getElementById('cn-log'); if(!root) return;
+  var MO=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function fmt(k){return k>=1000?(k>=10000?Math.round(k/1000):(Math.round(k/100)/10))+'M':k+'K';}
+  function mon(s){var p=s.split('-');return MO[+p[1]-1]+' '+p[0];}
+  var rows=D.map(function(d){return {name:d[0],list:d[1],g:d[2],saved:d[3],a:d[4],b:d[5],pre:!!d[6],room:d[7],x:d[5]/d[4]};});
+  var maxLog=Math.log(Math.max.apply(null,rows.map(function(r){return r.x;})));
+  var list=root.querySelector('.cnl-list'), more=root.querySelector('.cnl-more');
+  var state={t:'took',g:'all',all:false}, LIMIT=10;
+  function rowHTML(r){
+    var w=Math.max(4,Math.round(Math.log(Math.max(r.x,1.05))/maxLog*100));
+    var x=r.x>=10?Math.round(r.x)+'×':(Math.round(r.x*10)/10)+'×';
+    var meta=r.pre?'<span class="cnl-flag">Fan since '+r.saved.slice(0,4)+'</span>':'<span>Saved '+mon(r.saved)+'</span>';
+    if(r.room) meta+='<span>Biggest room: '+r.room+'</span>';
+    var from=r.pre?'Oct 2023':'when I saved';
+    return '<div class="cnl-row"><div><p class="cnl-name">'+r.name.replace(/&/g,'&amp;')+'</p><div class="cnl-meta">'+meta+'</div></div>'+
+      '<div class="cnl-g"><span class="cnl-nums"><b>'+fmt(r.a)+'</b> '+from+' &rarr; <b>'+fmt(r.b)+'</b> now</span><span class="cnl-x">'+x+'</span>'+
+      '<div class="cnl-track" aria-hidden="true"><div class="cnl-fill" style="width:'+w+'%"></div></div></div></div>';
+  }
+  function render(){
+    var sel=rows.filter(function(r){return r.list===state.t&&(state.g==='all'||r.g===state.g);}).sort(function(a,b){return b.x-a.x;});
+    var shown=state.all?sel:sel.slice(0,LIMIT);
+    list.innerHTML=shown.map(rowHTML).join('')||'<p class="cnl-sub">Nothing in this filter yet.</p>';
+    more.hidden=sel.length<=LIMIT;
+    more.textContent=state.all?'Show fewer':'Show all '+sel.length;
+    [].forEach.call(root.querySelectorAll('.cnl-tab'),function(b){
+      var n=rows.filter(function(r){return r.list===b.dataset.t;}).length;
+      b.querySelector('span').textContent=n; b.setAttribute('aria-selected',b.dataset.t===state.t?'true':'false');
+    });
+    [].forEach.call(root.querySelectorAll('.cnl-chip'),function(b){b.setAttribute('aria-pressed',b.dataset.g===state.g?'true':'false');});
+  }
+  [].forEach.call(root.querySelectorAll('.cnl-tab'),function(b){b.addEventListener('click',function(){state.t=b.dataset.t;state.all=false;render();});});
+  [].forEach.call(root.querySelectorAll('.cnl-chip'),function(b){b.addEventListener('click',function(){state.g=b.dataset.g;state.all=false;render();});});
+  more.addEventListener('click',function(){state.all=!state.all;render();});
+  // spotlight sparkline
+  var svg=root.querySelector('.cnl-spark'),W=360,H=140,P=8,mx=1000,mn=300;
+  var pts=VL.map(function(v,i){return [P+i*(W-2*P)/(VL.length-1),H-P-(v-mn)/(mx-mn)*(H-2*P)];});
+  var line=pts.map(function(p,i){return (i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1);}).join(' ');
+  var last=pts[pts.length-1];
+  svg.innerHTML='<path d="'+line+' L'+last[0].toFixed(1)+' '+(H-P)+' L'+P+' '+(H-P)+' Z" fill="rgba(127,200,186,.18)"/>'+
+    '<path d="'+line+'" fill="none" stroke="#7FC8BA" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>'+
+    '<circle cx="'+last[0].toFixed(1)+'" cy="'+last[1].toFixed(1)+'" r="4.5" fill="#F4EFE6"/>';
+  render();
+})();
+</script>
